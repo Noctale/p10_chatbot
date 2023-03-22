@@ -94,8 +94,8 @@ def init_func(argv): #
     return app
 
 
-APP = web.Application(middlewares=[bot_telemetry_middleware, aiohttp_error_middleware])
-APP.router.add_post("/api/messages", messages)
+#APP = web.Application(middlewares=[bot_telemetry_middleware, aiohttp_error_middleware])
+#APP.router.add_post("/api/messages", messages)
 
 if __name__ == "__main__":
     app = init_func(None) #
