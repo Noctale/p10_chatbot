@@ -5,7 +5,7 @@
   "body": [
     {
       "type": "Image",
-      "url": "https://www.enukesoftware.com/blog/wp-content/uploads/2019/11/airplane-4256362_960_720.jpg",
+      "url": "https://zupimages.net/up/23/12/qw4u.png",
       "size": "stretch"
     },
     {
@@ -13,7 +13,7 @@
       "spacing": "medium",
       "size": "default",
       "weight": "bolder",
-      "text": "Welcome on our travel agency !  I am Bob the bot !",
+      "text": "Welcome on FLY ME !",
       "wrap": true,
       "maxLines": 0
     },
@@ -21,7 +21,7 @@
       "type": "TextBlock",
       "size": "default",
       "isSubtle": true,
-      "text": "I'm a bot designed to help you in your booking process.\n Just ask me whatever you like !\nNote: for internal statistics, your conversation could be saved.",
+      "text": "I'm a bot designed to help you in your booking process.\n Just ask me what trip you have in mind right now !",
       "wrap": true,
       "maxLines": 0
     }

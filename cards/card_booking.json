@@ -17,7 +17,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "Flight Status",
+                            "text": "Your Flight",
                             "horizontalAlignment": "Center",
                             "isSubtle": true,
                             "wrap": true
@@ -40,40 +40,6 @@
                             "weight": "Bolder",
                             "isSubtle": true,
                             "maxLines": -2
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "ColumnSet",
-            "separator": true,
-            "spacing": "Medium",
-            "columns": [
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "{seat_class} class",
-                            "isSubtle": true,
-                            "weight": "Bolder",
-                            "wrap": true,
-                            "size": "Large"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "{adult} adults",
-                            "spacing": "Small",
-                            "wrap": true,
-                            "color": "Dark"
-                        },
-                        {
-                            "type": "TextBlock",
-                            "text": "{children} children",
-                            "spacing": "Small",
-                            "wrap": true
                         }
                     ]
                 }
@@ -181,24 +147,7 @@
                         }
                     ]
                 },
-                {
-                    "type": "Column",
-                    "width": "auto",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": " ",
-                            "wrap": true
-                        },
-                        {
-                            "type": "Image",
-                            "url": "https://adaptivecards.io/content/airplane.png",
-                            "altText": "Airplane",
-                            "size": "Medium"
-                        }
-                    ]
-                },
-                {
+                 {
                     "type": "Column",
                     "width": 1,
                     "items": [
@@ -218,6 +167,6 @@
         }
     ],
     "backgroundImage": {
-        "url": "https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?w=2000"
+        "url": "https://zupimages.net/up/23/13/xz3a.png"
     }
 }
