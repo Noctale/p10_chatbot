@@ -52,38 +52,38 @@ class TestLuisApp(unittest.TestCase):
         self.assertIsNone(result.end_date)
         self.assertIsNone(result.start_date)
 
-# This class will mainly test if dates can be extracted as entities
+# This class will mainly test if budgets & dates can be extracted as entities
 class NumberPromptTest(aiounittest.AsyncTestCase):
-    # # This method will mainly test if number of adults can be extracted as entity
-    # async def test_number_prompt(self):
-    #     async def exec_test(turn_context:TurnContext):
-    #         dialog_context = await dialogs.create_context(turn_context)
+    # This method will mainly if test budget can be extracted as entity
+    async def test_budget_prompt(self):
+        async def exec_test(turn_context:TurnContext):
+            dialog_context = await dialogs.create_context(turn_context)
 
-    #         results = await dialog_context.continue_dialog()
-    #         if (results.status == DialogTurnStatus.Empty):
-    #             options = PromptOptions(
-    #                 prompt=MessageFactory.text("How many adults will be present?")
-    #             )
-    #             await dialog_context.prompt(NumberPrompt.__name__, options)
+            results = await dialog_context.continue_dialog()
+            if (results.status == DialogTurnStatus.Empty):
+                options = PromptOptions(
+                    prompt=MessageFactory.text("What will be the budget for your trip?")
+                )
+                await dialog_context.prompt(NumberPrompt.__name__, options)
 
-    #         elif results.status == DialogTurnStatus.Complete:
-    #             reply = results.result
-    #             await turn_context.send_activity(str(reply))
+            elif results.status == DialogTurnStatus.Complete:
+                reply = results.result
+                await turn_context.send_activity(str(reply))
 
-    #         await conv_state.save_changes(turn_context)
+            await conv_state.save_changes(turn_context)
 
-    #     adapter = TestAdapter(exec_test)
+        adapter = TestAdapter(exec_test)
 
-    #     conv_state = ConversationState(MemoryStorage())
+        conv_state = ConversationState(MemoryStorage())
 
-    #     dialogs_state = conv_state.create_property("dialog-state")
-    #     dialogs = DialogSet(dialogs_state)
+        dialogs_state = conv_state.create_property("dialog-state")
+        dialogs = DialogSet(dialogs_state)
         
-    #     dialogs.add(NumberPrompt(NumberPrompt.__name__))
+        dialogs.add(NumberPrompt(NumberPrompt.__name__))
 
-    #     step1 = await adapter.test('Hello', 'How many adults will be present?')
-    #     step2 = await step1.send('Just 2 adults.')
-    #     await step2.assert_reply("2")
+        step1 = await adapter.test('Hello', 'What will be the budget for your trip?')
+        step2 = await step1.send('about 500 $')
+        await step2.assert_reply("500")
 
     # This method will mainly test if start date and end date can be extracted as entities
     async def test_date_prompt(self):
